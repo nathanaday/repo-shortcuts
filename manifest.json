@@ -1,0 +1,9 @@
+{
+  "id": "repo-shortcuts",
+  "name": "Repo Shortcuts",
+  "version": "0.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "Link local git repositories into your notes: show repository info and git status, and open a repository in your editor, terminal, or browser.",
+  "author": "nathanaday",
+  "isDesktopOnly": true
+}

@@ -1,0 +1,267 @@
+.repo-shortcuts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-4-2);
+  padding: var(--size-4-3) var(--size-4-4);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+  font-size: var(--font-ui-medium);
+  line-height: 1.4;
+}
+
+.repo-shortcuts .rs-icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  color: var(--text-muted);
+}
+
+.repo-shortcuts .rs-icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+.repo-shortcuts .rs-head,
+.repo-shortcuts .rs-row {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-2);
+  min-width: 0;
+}
+
+.repo-shortcuts .rs-head .rs-icon {
+  color: var(--text-accent);
+  font-size: 1.15em;
+}
+
+.repo-shortcuts .rs-title {
+  font-weight: var(--font-semibold);
+  color: var(--text-normal);
+}
+
+.repo-shortcuts .rs-upstream,
+.repo-shortcuts .rs-path,
+.repo-shortcuts .rs-commit code,
+.repo-shortcuts .rs-branch-name {
+  font-family: var(--font-monospace);
+  font-size: var(--font-smaller);
+}
+
+.repo-shortcuts .rs-upstream {
+  color: var(--text-muted);
+}
+
+.repo-shortcuts .rs-repo-name {
+  margin-left: auto;
+  color: var(--text-faint);
+  font-size: var(--font-smaller);
+  white-space: nowrap;
+}
+
+.repo-shortcuts .rs-faint,
+.repo-shortcuts .rs-faint.rs-icon,
+.repo-shortcuts .rs-hint {
+  color: var(--text-faint);
+  font-size: var(--font-smaller);
+}
+
+.repo-shortcuts .rs-desc {
+  color: var(--text-muted);
+}
+
+.repo-shortcuts .rs-path {
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repo-shortcuts .rs-path:hover {
+  color: var(--text-accent);
+}
+
+.repo-shortcuts .rs-url {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-smaller);
+}
+
+.repo-shortcuts .rs-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-4-2);
+}
+
+.repo-shortcuts .rs-chip {
+  --rs-tone: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-2-2);
+  padding: 1px var(--size-4-2);
+  border-radius: var(--radius-l);
+  border: 1px solid color-mix(in srgb, var(--rs-tone) 35%, transparent);
+  background: color-mix(in srgb, var(--rs-tone) 12%, transparent);
+  color: var(--rs-tone);
+  font-size: var(--font-smaller);
+  white-space: nowrap;
+}
+
+.repo-shortcuts .rs-chip .rs-icon {
+  color: inherit;
+}
+
+.repo-shortcuts .rs-chip.rs-ok {
+  --rs-tone: var(--color-green);
+}
+
+.repo-shortcuts .rs-chip.rs-info {
+  --rs-tone: var(--color-blue);
+}
+
+.repo-shortcuts .rs-chip.rs-warn {
+  --rs-tone: var(--color-orange);
+}
+
+.repo-shortcuts .rs-chip.rs-error {
+  --rs-tone: var(--color-red);
+}
+
+.repo-shortcuts .rs-commit .rs-subject {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+.repo-shortcuts .rs-commit .rs-when {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.repo-shortcuts .rs-branches summary {
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: var(--font-smaller);
+}
+
+.repo-shortcuts .rs-branches ul {
+  margin: var(--size-4-1) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.repo-shortcuts .rs-branches li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--size-4-3);
+  padding: 1px 0 1px var(--size-4-3);
+  border-left: 2px solid transparent;
+}
+
+.repo-shortcuts .rs-branches li.rs-current {
+  border-left-color: var(--text-accent);
+}
+
+.repo-shortcuts .rs-branches li.rs-current .rs-branch-name {
+  color: var(--text-accent);
+}
+
+.repo-shortcuts .rs-track {
+  margin-left: auto;
+  font-family: var(--font-monospace);
+  white-space: nowrap;
+}
+
+.repo-shortcuts .rs-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--size-4-2);
+  padding-top: var(--size-4-2);
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.repo-shortcuts .rs-actions {
+  display: flex;
+  gap: var(--size-4-2);
+}
+
+.repo-shortcuts .rs-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-2-3);
+  height: auto;
+  padding: var(--size-2-2) var(--size-4-2);
+  font-size: var(--font-smaller);
+  align-self: flex-start;
+}
+
+.repo-shortcuts.rs-problem {
+  border-color: color-mix(in srgb, var(--color-orange) 45%, transparent);
+}
+
+.repo-shortcuts.rs-problem .rs-row .rs-icon {
+  color: var(--color-orange);
+}
+
+.repo-shortcuts.rs-open {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.repo-shortcuts .rs-open-button {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4-2);
+  width: 100%;
+  height: auto;
+  padding: var(--size-4-2) var(--size-4-4);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background: var(--background-secondary);
+  box-shadow: none;
+  font-size: var(--font-ui-medium);
+  cursor: pointer;
+}
+
+.repo-shortcuts .rs-open-button .rs-icon:first-child {
+  color: var(--text-accent);
+  font-size: 1.15em;
+}
+
+.repo-shortcuts .rs-open-button:hover:not(.rs-disabled) {
+  border-color: var(--interactive-accent);
+  background: var(--background-modifier-hover);
+}
+
+.repo-shortcuts .rs-open-button.rs-disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.repo-shortcuts .rs-open-button.rs-disabled .rs-repo-name {
+  color: var(--color-orange);
+}
+
+.repo-shortcuts-settings .rs-repo-card {
+  margin-bottom: var(--size-4-4);
+  padding: 0 var(--size-4-4);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+}
+
+.repo-shortcuts-settings .rs-wide-input {
+  width: 22em;
+  max-width: 100%;
+}
+
+.repo-shortcuts-settings .rs-target-setting .setting-item-info {
+  display: none;
+}
+
+.repo-shortcuts-settings .rs-target-setting .setting-item-control {
+  justify-content: flex-start;
+}
