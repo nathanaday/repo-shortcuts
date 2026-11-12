@@ -7,7 +7,7 @@
 
 ## About
 
-Many of my obsidian notes are **about** some git repository that I'm working on. However, I found myself doing a lot of repitive cross referencing:
+Many of my obsidian notes are **about** some git repository that I'm working on. However, I found myself doing a lot of tedious cross referencing:
 
 - opening the repo in my terminal
 - opening in vscode
