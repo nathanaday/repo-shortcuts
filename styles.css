@@ -214,22 +214,30 @@
 
 .repo-shortcuts .rs-open-button {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: var(--size-4-2);
   width: 100%;
   height: auto;
-  padding: var(--size-4-2) var(--size-4-4);
+  padding: var(--size-4-3) var(--size-4-4);
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-m);
   background: var(--background-secondary);
   box-shadow: none;
   font-size: var(--font-ui-medium);
+  line-height: 1.4;
+  text-align: left;
+  white-space: normal;
   cursor: pointer;
 }
 
-.repo-shortcuts .rs-open-button .rs-icon:first-child {
-  color: var(--text-accent);
-  font-size: 1.15em;
+.repo-shortcuts .rs-open-action {
+  color: var(--text-muted);
+}
+
+.repo-shortcuts .rs-open-arrow {
+  margin-left: auto;
+  color: var(--text-faint);
 }
 
 .repo-shortcuts .rs-open-button:hover:not(.rs-disabled) {
@@ -237,20 +245,22 @@
   background: var(--background-modifier-hover);
 }
 
-.repo-shortcuts .rs-open-button.rs-disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
+.repo-shortcuts .rs-open-button:hover:not(.rs-disabled) .rs-open-action,
+.repo-shortcuts .rs-open-button:hover:not(.rs-disabled) .rs-open-arrow {
+  color: var(--text-accent);
 }
 
-.repo-shortcuts .rs-open-button.rs-disabled .rs-repo-name {
-  color: var(--color-orange);
+.repo-shortcuts .rs-open-button.rs-disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 .repo-shortcuts-settings .rs-repo-card {
-  margin-bottom: var(--size-4-4);
-  padding: 0 var(--size-4-4);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--radius-m);
+  margin-bottom: var(--size-4-8);
+}
+
+.repo-shortcuts-settings .rs-repo-card .setting-item {
+  align-items: center;
 }
 
 .repo-shortcuts-settings .rs-wide-input {

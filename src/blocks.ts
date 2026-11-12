@@ -260,10 +260,14 @@ export class RepoBlock extends MarkdownRenderChild {
     }
 
     const button = root.createEl("button", { cls: "rs-open-button" });
-    icon(button, iconName, sameName(targetName, GITHUB_TARGET) ? "globe" : "terminal");
-    button.createSpan({ cls: "rs-title", text: label });
-    button.createSpan({ cls: "rs-repo-name", text: problem ? `${repo.name}: ${problem}` : repo.name });
-    icon(button, "arrow-up-right").addClass("rs-faint");
+    const head = button.createDiv({ cls: "rs-head" });
+    icon(head, "folder-git-2", "folder");
+    head.createSpan({ cls: "rs-title", text: repo.name });
+    const row = button.createDiv({ cls: "rs-row rs-open-action" });
+    icon(row, iconName, sameName(targetName, GITHUB_TARGET) ? "globe" : "terminal");
+    row.createSpan({ text: label });
+    if (problem) row.createSpan({ cls: "rs-chip rs-warn", text: problem });
+    icon(row, "arrow-up-right").addClass("rs-open-arrow");
     if (problem) {
       button.disabled = true;
       button.addClass("rs-disabled");
