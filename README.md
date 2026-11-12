@@ -8,6 +8,12 @@ Notes about a project usually sit far from the repository that holds its code. T
 
 Repo Shortcuts is an Obsidian plugin that puts the repository inside the note. You register a local repository once in the plugin settings, then reference it by name from a code block. The block renders the repository's details, its live git status, or a button that opens it in your editor, your terminal, or on GitHub.
 
+The blocks follow your Obsidian theme:
+
+| Dark | Light |
+| --- | --- |
+| ![The repo-info, repo-status, and repo-open blocks in dark mode](resources/dark-mode.png) | ![The repo-info, repo-status, and repo-open blocks in light mode](resources/light-mode.png) |
+
 ## Quickstart
 
 ### Prerequisites
