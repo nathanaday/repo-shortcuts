@@ -10,9 +10,10 @@ Repo Shortcuts is an Obsidian plugin that puts the repository inside the note. Y
 
 The blocks follow your Obsidian theme:
 
-| Dark | Light |
-| --- | --- |
-| ![The repo-info, repo-status, and repo-open blocks in dark mode](resources/dark-mode.png) | ![The repo-info, repo-status, and repo-open blocks in light mode](resources/light-mode.png) |
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="resources/dark-mode.png">
+  <img src="resources/light-mode.png" alt="The repo-info, repo-status, and repo-open blocks rendered in a note" width="700">
+</picture>
 
 ## Quickstart
 
